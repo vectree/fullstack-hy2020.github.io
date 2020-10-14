@@ -28,7 +28,10 @@ Let's start writing our first TypeScript-app. To keep things simple, let's start
 It compiles and executes the specified TypeScript file immediately, so that there is no need for a separate compilation step.
 
 <!-- To use <i>ts-node</i> you could install it globally with the official <i>typescript</i> package by running <i>npm install -g ts-node typescript</i>.  -->
-You can install both <i>ts-node</i> and the official <i>typescript</i> package globally by running <i>npm install -g ts-node typescript</i>.
+You can install both <i>ts-node</i> and the official <i>typescript</i> package globally by running 
+```
+npm install -g ts-node typescript
+```
 
 <!-- If you can't or don't want to install global packages you can create an npm project that has the required dependencies and run your scripts in it. We shall also go with this approach. -->
 If you can't or don't want to install global packages, you can create an npm project which has the required dependencies and run your scripts in it. 
@@ -100,7 +103,7 @@ multiplicator('how about a string?', 4, 'Multiplied a string and 4, the result i
 Now when we run the code, the output is: <i>Multiplied a string and 4, the result is: NaN</i>.
 
 <!-- Wouldn't it be nice if there was a way that the language itself could prevent us from ending up in situations like this? This is where we get the first benefits of TypeScript into use. Let's add types to the parameters and see where it takes us. -->
-Wouldn't it be nice it the language itself could prevent us from ending up in situations like this? 
+Wouldn't it be nice if the language itself could prevent us from ending up in situations like this? 
 This is where we see the first benefits of TypeScript.  Let's add types to the parameters and see where it takes us.
 
 TypeScript natively supports multiple types including <i>number</i>, <i>string</i> and  <i>Array</i>. See the comprehensive list [here](https://www.typescriptlang.org/docs/handbook/basic-types.html). More complex custom types can also be created.
@@ -439,7 +442,7 @@ For now we will only use the compiler option [noImplicitAny](https://www.typescr
 
 Create the code of this exercise to file <i>bmiCalculator.ts</i>
 
-Write a function <i>calculateBmi</i> that counts [BMI](https://en.wikipedia.org/wiki/Body_mass_index) based on given weight (in kilograms) and height (in centimeters) and then returns a message that suits the results. 
+Write a function <i>calculateBmi</i> that counts [BMI](https://en.wikipedia.org/wiki/Body_mass_index) based on given height (in centimeters) and weight (in kilograms) and then returns a message that suits the results. 
 
 Call the function in the same file with hard-coded parameters and print out the result. The code
 
@@ -469,7 +472,7 @@ Write a function <i>calculateExercises</i> that calculates the average time of <
   - a rating between the numbers 1-3 that tells how well the hours are met. You can decide on the metric on your own.
   - a text value explaining the rating
 
-The daily exercise hours are given to the function as an [array](https://www.typescriptlang.org/docs/handbook/basic-types.html#array) that contains the number of exercise hours for each day in the training period. Eg. a week with 3 hours of training at Monday, none at Tuesday, 2 hours at Wednesday, 4.5 hours at Thursday and so on would be represented by the following array:
+The daily exercise hours are given to the function as an [array](https://www.typescriptlang.org/docs/handbook/basic-types.html#array) that contains the number of exercise hours for each day in the training period. Eg. a week with 3 hours of training on Monday, none on Tuesday, 2 hours on Wednesday, 4.5 hours on Thursday and so on would be represented by the following array:
 
 ```js
 [3, 0, 2, 4.5, 0, 3, 1]

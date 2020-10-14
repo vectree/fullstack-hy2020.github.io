@@ -1169,7 +1169,7 @@ export default router;
 ```js
 router.post('/', (req, res) => {
   const { date, weather, visibility, comment } = req.body;
-  const newDiaryEntry = diaryService.AddEntry(
+  const newDiaryEntry = diaryService.addEntry(
     date,
     weather,
     visibility,
@@ -1184,10 +1184,11 @@ router.post('/', (req, res) => {
 
 ```js
 import {
-  NonSensitiveDiaryEntry, DiaryEntry,
-  Visibility, Weather // highlight-line
-  } from '../types';
-
+  NonSensitiveDiaryEntry,   
+  DiaryEntry,
+  Visibility, // highlight-line
+   Weather // highlight-line
+} from '../types';
 
 const addEntry = (
     date: string, weather: Weather, visibility: Visibility, comment: string
@@ -1203,7 +1204,7 @@ const addEntry = (
   
   diaries.push(newDiaryEntry);
   return newDiaryEntry;
-}
+};
 ```
 
 

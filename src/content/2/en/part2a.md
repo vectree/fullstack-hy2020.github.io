@@ -7,7 +7,7 @@ lang: en
 
 <div class="content">
 
-Before starting a new topic, let's recap some of the topics that proved difficult last year.
+Before starting a new part, let's recap some of the topics that proved difficult last year.
 
 ### console.log
 
@@ -40,7 +40,7 @@ If necessary, read more about debugging React-applications [here](/en/part1/a_mo
 
 ### Protip: Visual Studio Code snippets
 
-With Visual studio code it's easy to create 'snippets', i.e. shortcuts for quickly generating commonly re-used portions of code, much like how 'sout' works in Netbeans. 
+With Visual Studio Code it's easy to create 'snippets', i.e. shortcuts for quickly generating commonly re-used portions of code, much like how 'sout' works in Netbeans. 
 Instructions for creating snippets can be found [here](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_creating-your-own-snippets).
 
 Useful, ready-made snippets can also be found as VS Code plugins, for example [here](https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets).
@@ -57,6 +57,8 @@ The most important snippet is the one for the <em>console.log()</em> command, fo
   }
 }
 ```
+
+Debugging your code using _console.log()_ is so common that Visual Studio Code has that snippet built in. To use it, type _log_ and hit tab to autocomplete. 
 
 ### JavaScript Arrays
 
@@ -319,7 +321,7 @@ note => <li key={note.id}>{note.content}</li>
 
 &nbsp;- is used to create view elements, the value of the variable must be rendered inside of curly braces. Try to see what happens if the braces are removed. 
 
-The use of curly braces will cause some headache in the beginning, but you will get used to them soon enough. The visual feedback from React is immediate.
+The use of curly braces will cause some headaches in the beginning, but you will get used to them soon enough. The visual feedback from React is immediate.
 
 ### Anti-pattern: array indexes as keys
 
@@ -329,7 +331,7 @@ We could have made the error message on our console disappear by using the array
 notes.map((note, i) => ...)
 ```
 
-When called like this, _i_ is assigned the value of the index of the position in the array where the <i>Note</i> resides.
+When called like this, _i_ is assigned the value of the index of the position in the array where the note resides.
 
 As such, one way to define the row generation without getting errors is:
 
@@ -413,7 +415,7 @@ import ReactDOM from 'react-dom'
 
 Let's move our <i>Note</i> component into its own module. 
 
-In smaller applications, components are usually placed in a directory called <i>components</i> , which is in turn placed within the <i>src</i> directory. The convention is to name the file after the component. 
+In smaller applications, components are usually placed in a directory called <i>components</i>, which is in turn placed within the <i>src</i> directory. The convention is to name the file after the component. 
 
 Now we'll create a directory called <i>components</i> for our application and place a file named <i>Note.js</i> inside. 
 The contents of the Note.js file are as follows: 
@@ -523,7 +525,7 @@ The piece of code causing the explosion is this:
 ```js
 const Course = ({ course }) => (
   <div>
-   <Header course={course} />
+    <Header course={course} />
   </div>
 )
 
@@ -566,7 +568,7 @@ When one thing is found to be working, it's time to log deeper. If the component
 ```js
 const Course = ({ course }) => (
   <div>
-   <Header course={course} />
+    <Header course={course} />
   </div>
 )
 ```
@@ -578,7 +580,7 @@ const Course = ({ course }) => {
   console.log(course) // highlight-line
   return (
     <div>
-    <Header course={course} />
+      <Header course={course} />
     </div>
   )
 }
@@ -592,7 +594,7 @@ const Course = (props) => { // highlight-line
   const { course } = props
   return (
     <div>
-    <Header course={course} />
+      <Header course={course} />
     </div>
   )
 }
@@ -710,7 +712,7 @@ const total = parts.reduce((s, p) => {
 })
 ```
 
-**Pro tip2:** There is a [plugin for VS code](https://marketplace.visualstudio.com/items?itemName=cmstead.jsrefactor) that automatically changes short form arrow functions into their longer form, and vice versa. 
+**Pro tip2:** There is a [plugin for VS Code](https://marketplace.visualstudio.com/items?itemName=cmstead.jsrefactor) that automatically changes short form arrow functions into their longer form, and vice versa. 
 
 ![](../../images/2/5b.png)
 

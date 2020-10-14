@@ -183,7 +183,7 @@ At this point the <i>dependencies</i> part is of most interest to us as it defin
 We now want to use axios. Theoretically, we could define the library directly in the <i>package.json</i> file, but it is better to install it from the command line.
 
 ```js
-npm install axios --save
+npm install axios
 ```
 
 
@@ -250,11 +250,11 @@ As we can see, the application is not able to bind itself to the [port](https://
 We used the command _npm install_ twice, but with slight differences:
 
 ```js
-npm install axios --save
+npm install axios
 npm install json-server --save-dev
 ```
 
-There is a fine difference in the parameters. <i>axios</i> is installed as a runtime dependency (_--save_) of the application, because the execution of the program requires the existence of the library. On the other hand, <i>json-server</i> was installed as a development dependency (_--save-dev_), since the program itself doesn't require it. It is used for assistance during software development. There will be more on different dependencies in the next part of the course.
+There is a fine difference in the parameters. <i>axios</i> is installed as a runtime dependency of the application, because the execution of the program requires the existence of the library. On the other hand, <i>json-server</i> was installed as a development dependency (_--save-dev_), since the program itself doesn't require it. It is used for assistance during software development. There will be more on different dependencies in the next part of the course.
 
 ### Axios and promises
 
@@ -263,8 +263,6 @@ Now we are ready to use axios. Going forward, json-server is assumed to be runni
 NB: To run json-server and your react app simultaneously, you may need to use two terminal windows. One to keep json-sever running and the other to run react-app.
 
 The library can be brought into use the same way other libraries, e.g. React, are, i.e. by using an appropriate <em>import</em> statement.
-
-
 
 Add the following to the file <i>index.js</i>:
 
@@ -278,7 +276,7 @@ const promise2 = axios.get('http://localhost:3001/foobar')
 console.log(promise2)
 ```
 
-This should be printed to the console
+If you open <http://localhost:3000> in the browser, this should be printed to the console
 
 ![](../../images/2/16b.png)
 
@@ -343,8 +341,8 @@ We can finally begin using the data fetched from the server.
 Let's try and request the notes from our local server and render them, initially as the App component. Please note that this approach has many issues, as we're rendering the entire <i>App</i> component only when we successfully retrieve a response:
 
 ```js
-import ReactDOM from 'react-dom'
 import React from 'react'
+import ReactDOM from 'react-dom'
 import App from './App'
 
 import axios from 'axios' // highlight-line
@@ -386,7 +384,7 @@ import axios from 'axios'
 import Note from './components/Note'
 
 const App = () => {
-  const [notes, setNotes] = useState([])
+  const [notes, setNotes] = useState([]) // highlight-line
   const [newNote, setNewNote] = useState('')
   const [showAll, setShowAll] = useState(true)
 

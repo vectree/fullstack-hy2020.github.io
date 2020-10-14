@@ -74,7 +74,7 @@ Cross-origin resource sharing (CORS)是一种机制，它允许一个网页上�
 使用命令安装<i>cors</i>
 
 ```bash
-npm install cors --save
+npm install cors
 ```
 
 <!-- take the middleware to use and allow for requests from all origins:  -->
@@ -104,7 +104,7 @@ app.use(cors())
 向项目的根目录添加一个名为  <i>Procfile</i>的文件，告诉 Heroku 如何启动应用。
 
 ```bash
-web: node index.js
+web: npm start
 ```
 
 <!-- Change the definition of the port our application uses at the bottom of the <i>index.js</i> file like so:  -->
@@ -405,7 +405,11 @@ const baseUrl = '/api/notes'
 ![](../../images/3/33.png)
 
 <!-- The reason is that the option <i>--save</i> was forgotten when <i>express</i> was installed, so information about the dependency was not saved to the file <i>package.json</i>. -->
-原因是当我安装<i>express</i>时，选项<i>--save</i>被忘记了，因此关于依赖项的信息没有保存到我的 package.json 文件中。
+<!-- 原因是当我安装<i>express</i>时，选项<i>--save</i>被忘记了，因此关于依赖项的信息没有保存到我的 package.json 文件中。 -->
+
+<!-- The reason is that the <i>express</i> package has not been installed with the <em>npm install express</em> command, so information about the dependency was not saved to the file <i>package.json</i>. -->
+这是因为当我们执行<em>npm install express</em> ，<i>express</i> 并没有被成功安装，因此关于依赖项的信息没有保存到我的 <i>package.json</i> 文件中。
+
 
 <!-- Another typical problem is that the application is not configured to use the port set to environment variable <em>PORT</em>:  -->
 另一个典型的问题是，应用没有配置为使用设置为环境变量 <em>PORT</em>的端口:

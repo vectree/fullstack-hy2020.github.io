@@ -11,9 +11,8 @@ lang: en
 Next let's connect the frontend we made in [part 2](/en/part2) to our own backend.
 
 <!-- Edellisessä osassa backendinä toiminut json-server tarjosi muistiinpanojen listan osoitteessa http://localhost:3001/notes fronendin käyttöön. Backendimme urlien rakenne on hieman erilainen, muistiinpanot löytyvät osoitteesta http://localhost:3001/api/notes, eli muutetaan frontendin tiedostossa <i>src/services/notes.js</i> määriteltyä muuttujaa _baseUrl_ seuraavasti: -->
-In the previous part, the frontend could ask for the list of notes from the json-server we had as a backend at from the address http://localhost:3001/notes.
-Our backend has a bit different url structure, and the notes can be found from http://localhost:3001/api/notes. 
-Let's change the attribute __baseUrl__ in the <i>src/services/notes.js</i> like so:
+In the previous part, the frontend could ask for the list of notes from the json-server we had as a backend, from the address http://localhost:3001/notes.
+Our backend has a slightly different url structure now, as the notes can be found at http://localhost:3001/api/notes. Let's change the attribute __baseUrl__ in the <i>src/services/notes.js</i> like so:
 
 ```js
 import axios from 'axios'
@@ -55,7 +54,7 @@ We can allow requests from other <i>origins</i> by using Node's [cors](https://g
 Install <i>cors</i> with the command
 
 ```bash
-npm install cors --save
+npm install cors
 ```
 
 take the middleware to use and allow for requests from all origins: 
@@ -79,7 +78,7 @@ Now that the whole stack is ready, let's move our application to the internet. W
 Add a file called  <i>Procfile</i> to the project's root to tell Heroku how to start the application. 
 
 ```bash
-web: node index.js
+web: npm start
 ```
 
 Change the definition of the port our application uses at the bottom of the <i>index.js</i> file like so: 
@@ -150,7 +149,7 @@ The backend directory should now look as follows:
 
 ![](../../images/3/27ea.png)
 
-To make express show <i>static content</i>, the page <i>index.html</i> and the JavaScript etc. it fetches, we need a built-in middleware from express called [static](http://expressjs.com/en/starter/static-files.html).
+To make express show <i>static content</i>, the page <i>index.html</i> and the JavaScript, etc., it fetches, we need a built-in middleware from express called [static](http://expressjs.com/en/starter/static-files.html).
 
 When we add the following amidst the declarations of middlewares
 ```js
@@ -313,7 +312,7 @@ The following is a log about one typical problem. Heroku cannot find application
 
 ![](../../images/3/33.png)
 
-The reason is that the option <i>--save</i> was forgotten when <i>express</i> was installed, so information about the dependency was not saved to the file <i>package.json</i>.
+The reason is that the <i>express</i> package has not been installed with the <em>npm install express</em> command, so information about the dependency was not saved to the file <i>package.json</i>.
 
 Another typical problem is that the application is not configured to use the port set to environment variable <em>PORT</em>: 
 

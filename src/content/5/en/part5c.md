@@ -582,7 +582,7 @@ Add CSS-classes to the component to help the testing as necessary.
 #### 5.14: Blog list tests, step2
 
 <!-- Tee testi, joka varmistaa että myös url ja likejen määrä näytetään kun blogin kaikki tiedot näyttävää nappia on painettu. -->
-Make a test which checks that blog's url and number of likes are shown when the button controlling the shown details has been clicked. 
+Make a test which checks that the blog's url and number of likes are shown when the button controlling the shown details has been clicked. 
 
 #### 5.15: Blog list tests, step3
 
@@ -592,10 +592,10 @@ Make a test which ensures that if the <i>like</i> button is clicked twice, the e
 #### 5.16*: Blog list tests, step4
 
 <!-- Tee uuden blogin luomisesta huolehtivalle lomakkelle testi, joka varmistaa, että lomake kutsuu propseina saamaansa takaisinkutsufunktiota oikeilla tiedoilla siinä vaiheessa kun blogi luodaan. -->
-Make a test for the new blog form. The test should check, that the form calls the event handler it received as props with the right details when a new blog is called. 
+Make a test for the new blog form. The test should check, that the form calls the event handler it received as props with the right details when a new blog is created. 
 
 <!-- Jos esim. määrittelet <i>input</i>-elementille id:n 'author': -->
-If, for example, you give an <i>input</i> element id 'author':
+If, for example, you set an <i>input</i> element's id attribute as 'author':
 
 ```js
 <input
@@ -618,7 +618,7 @@ const author = component.container.querySelector('#author')
 
 ### Frontend integration tests
 
-In the previous part of the course material, we wrote integration tests for the backend that tested its logic and connected the database through the API provided by the backend. When writing these tests, we made the conscious decision not to write unit tests, as the code for that backend is fairly simple, and it is likely that bugs in our application occur in more complicated scenarios than integration tests are well suited for.
+In the previous part of the course material, we wrote integration tests for the backend that tested its logic and connected the database through the API provided by the backend. When writing these tests, we made the conscious decision not to write unit tests, as the code for that backend is fairly simple, and it is likely that bugs in our application occur in more complicated scenarios than unit tests are well suited for.
 
 So far all of our tests for the frontend have been unit tests that have validated the correct functioning of individual components. Unit testing is useful at times, but even a comprehensive suite of unit tests is not enough to validate that the application works as a whole.
 

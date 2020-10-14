@@ -634,14 +634,15 @@ CI=true npm test -- --coverage
 
 #### 5.15: Blog list tests, 步骤3
 <!-- Make a test which ensures that if the <i>like</i> button is clicked twice, the event handler the component received as props is called twice.  -->
-进行一个测试，确保如果单击<i>like</i> 按钮两次，那么作为props接收的组件的事件处理程序将被调用两次。
+进行一个测试，确保如果单击<i>like</i> 按钮两次，那么作为props接收的组件的事件处理程序将创建两次。
 
 #### 5.16*: Blog list tests, 步骤4
 <!-- Make a test for the new blog form. The test should check, that the form calls the event handler it received as props with the right details when a new blog is called.  -->
 为新的博客表单做一个测试。 测试应该检查，当调用新建博客时，表单是否使用正确的细节调用它作为props接收的事件处理程序。
 
 <!-- If, for example, you give an <i>input</i> element id 'author': -->
-例如，如果你给出一个<i>input</i> 元素 id'author' :
+<!-- If, for example, you set an <i>input</i> element's id attribute as 'author': -->
+例如，如果你设置<i>input</i> 元素的 id 属性为 'author' :
 
 ```js
 <input
@@ -668,7 +669,7 @@ const author = component.container.querySelector('#author')
 【前端集成测试】
 
 <!-- In the previous part of the course material, we wrote integration tests for the backend that tested its logic and connected database through the API provided by the backend. When writing these tests, we made the conscious decision not to write unit tests, as the code for that backend is fairly simple, and it is likely that bugs in our application occur in more complicated scenarios that integration tests are well suited for. -->
-在课程教材的前面章节，我们为后端编写了集成测试，测试其逻辑并通过后端提供的 API 连接数据库。 在编写这些测试时，我们有意识地不编写单元测试，因为后端的代码相当简单，但是我们应用中的错误可能发生在更复杂的场景中，而集成测试非常适合这些场景。
+在课程教材的前面章节，我们为后端编写了集成测试，测试其逻辑并通过后端提供的 API 连接数据库。 在编写这些测试时，我们有意识地不编写单元测试，因为后端的代码相当简单，但是我们应用中的错误可能发生在更复杂的场景中，而单元测试非常适合这些场景。
 
 <!-- So far all of our tests for the frontend have been unit tests that have validated the correct functioning of individual components. Unit testing is useful at times, but even a comprehensive suite of unit tests is not enough to validate that the application works as a whole. -->
 到目前为止，我们对前端的所有测试都是单元测试，这些测试验证了单个组件的正确功能。单元测试有时很有用，但即使是一套完整的单元测试套件也不足以验证应用作为一个整体是否工作。

@@ -248,8 +248,8 @@ module.exports = config
 <!-- Next, let's transform our application into a minimal React application. Let's install the required libraries: -->
 接下来，让我们把我们的应用转换成一个最小的 React 应用:
 
-```js
-npm install --save react react-dom
+```bash
+npm install react react-dom
 ```
 
 <!-- And let's turn our application into a React application by adding the familiar definitions in the <i>index.js</i> file: -->
@@ -396,8 +396,8 @@ const App = () =>
 <!-- It's worth noting that if the bundled application's source code uses <i>async/await</i>, the browser will not render anything on some browsers. [Googling the error message in the console](https://stackoverflow.com/questions/33527653/babel-6-regeneratorruntime-is-not-defined) will shed some light on the issue. We have to install one more missing dependency, that is [@babel/polyfill](https://babeljs.io/docs/en/babel-polyfill): -->
 值得注意的是，如果捆绑的应用的源代码使用<i>async/await</i>，浏览器将不会在某些浏览器上渲染任何内容。 [谷歌在控制台中搜索错误信息](https://stackoverflow.com/questions/33527653/babel-6-regeneratorruntime-is-not-defined)将会在这个问题上给出一些答案。 我们必须再安装一个缺失的依赖项，即[@babel/polyfill](https://babeljs.io/docs/en/babel-polyfill) :
 
-```
-npm install --save @babel/polyfill
+```bash
+npm install @babel/polyfill
 ```
 
 <!-- Let's make the following changes to the <i>entry</i> property of the webpack configuration object in the <i>webpack.config.js</i> file: -->
@@ -574,7 +574,7 @@ npm install --save-dev webpack-dev-server
   // ...
   "scripts": {
     "build": "webpack --mode=development",
-    "start": "webpack-dev-server --mode=development" // highlight-line
+    "start": "webpack serve --mode=development" // highlight-line
   },
   // ...
 }
@@ -757,7 +757,7 @@ Javascript 文件的优化过程被称为<i>minification</i>，用于此目的�
   "description": "practising webpack",
   "scripts": {
     "build": "webpack --mode=production", // highlight-line
-    "start": "webpack-dev-server --mode=development"
+    "start": "webpack serve --mode=development"
   },
   "license": "MIT",
   "dependencies": {

@@ -26,6 +26,7 @@ export const PartBanner = ({ lang }) => {
                   'React router, custom hooks, styling app with CSS and webpack',
                   'GraphQL',
                   'Typescript',
+                  'React Native',
                 ]
               : lang === 'zh'
               ? [
@@ -39,6 +40,7 @@ export const PartBanner = ({ lang }) => {
                   'React router、自定义 hook，利用CSS和webpack给app添加样式',
                   'GraphQL',
                   'Typescript',
+                  'React Native',
                 ]
               : [
                   'Web-sovellusten toiminnan perusteet',
@@ -51,6 +53,7 @@ export const PartBanner = ({ lang }) => {
                   'React router, custom-hookit, tyylikirjastot ja webpack',
                   'GraphQL',
                   'Typescript',
+                  'React Native',
                 ];
 
           return (

@@ -41,7 +41,7 @@ We will get to know Redux by implementing a counter application yet again:
 Create a new create-react-app-application and install </i>redux</i> with the command
 
 ```bash
-npm install redux --save
+npm install redux
 ```
 
 
@@ -390,7 +390,7 @@ Since we do not have any code which uses this functionality yet, we are expandin
 Let's start by creating a test for handling the action <i>NEW\_NOTE</i>.
 
 
-To make testing easier, we'll first move the reducer's code to its own module to file <i>src/reducers/noteReducer.js</i>. We'll also add the library [deep-freeze](https://github.com/substack/deep-freeze), which can be used to ensure that the reducer has been correctly defined as a immutable function. 
+To make testing easier, we'll first move the reducer's code to its own module to file <i>src/reducers/noteReducer.js</i>. We'll also add the library [deep-freeze](https://github.com/substack/deep-freeze), which can be used to ensure that the reducer has been correctly defined as an immutable function. 
 Let's install the library as a development dependency
 
 ```js
@@ -893,8 +893,8 @@ There are multiple ways to share the redux-store with components. First we will 
 <!-- Asennetaan react-redux -->
 First we install react-redux
 
-```js
-npm install --save react-redux
+```bash
+npm install react-redux
 ```
 
 <!-- Eriytetään komponentti _App_ omaan tiedostoon _App.js_. Tarkastellaan ensin mitä sovelluksen muiden tiedostojen sisällöksi tulee. -->
