@@ -536,7 +536,7 @@ Event handlers must always be a function or a reference to a function. The butto
 If we were to define the event handler as a string:
 
 ```js
-<button onClick={'crap...'}>button</button>
+<button onClick="crap...">button</button>
 ```
 
 React would warn us about this in the console:
@@ -575,7 +575,7 @@ What about the following:
 </button>
 ```
 
-The message gets printed to the console once but nothing happens when we click the button a second time. Why does this not work even when our event handler contains a function _console.log_?
+The message gets printed to the console once when the component is rendered but nothing happens when we click the button. Why does this not work even when our event handler contains a function _console.log_?
 
 The issue here is that our event handler is defined as a <i>function call</i> which means that the event handler is actually assigned the returned value from the function, which in the case of _console.log_ is <i>undefined</i>.
 
