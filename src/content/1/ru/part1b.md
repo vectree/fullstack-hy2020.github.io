@@ -535,7 +535,7 @@ janja.greet()
 
 Классы ES6 часто используются в "старом" React, а также в Node.js, поэтому понимание преимуществ классов важно даже в этом курсе. Однако, поскольку мы будем использовать [хуки](https://ru.reactjs.org/docs/hooks-intro.html) React на протяжении всего курса, у нас нет необходимостив использовании классов JavaScripts.
 
-### Материалы поJavaScript
+### Материалы по JavaScript
 
 <!-- There exists both good and poor guides for JavaScript on the internet. Most of the links on this page relating to JavaScript features reference [Mozilla's Javascript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript).-->
 

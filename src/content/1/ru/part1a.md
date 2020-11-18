@@ -486,8 +486,6 @@ const App = () => {
 
 <h4>1.2: Информация о курсе, шаг 2</h4>
 
-Refactor the <i>Content</i> component so that it does not render any names of parts or their number of exercises by itself. Instead it only renders three <i>Part</i> components of which each renders the name and number of exercises of one part.
-
 Выполните рефакторинг компонента <i>Content</i>. Вынесите отрисовку имен разделов и количества упражнений в отдельный компонент <i>Part</i>. В результате  у нас будет три компонента <i>Part</i>, каждый из которых отрисовывает свой раздел и количество упражнений этого раздела.
 
 ```js
